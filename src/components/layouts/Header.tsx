@@ -1,6 +1,15 @@
-import { Button, Col, Container, Dropdown, Nav, Row } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  Dropdown,
+  Nav,
+  Navbar,
+  Row,
+} from "react-bootstrap";
 import { CiHeart } from "react-icons/ci";
 import {
+  FaBars,
   FaDollarSign,
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -13,156 +22,195 @@ import { PiShoppingCartThin } from "react-icons/pi";
 
 const Header = () => {
   return (
-    <header>
-      {/* <!-- TOP HEADER --> */}
-      <div id="top-header" className="py-1">
-        <Container>
-          <Nav className="d-flex justify-content-between">
-            <div className="d-flex">
-              <Nav.Link href="#home">
-                <FaPhoneAlt className="icon-top-header" /> +021-95-51-84
-              </Nav.Link>
-              <Nav.Link href="#home">
-                <MdOutlineEmail className="icon-top-header" /> email@email.com
-              </Nav.Link>
-              <Nav.Link href="#home">
-                <FaMapMarkerAlt className="icon-top-header" /> 1734 Stonecoal
-                Road
-              </Nav.Link>
-            </div>
-            <div className="d-flex">
-              <Nav.Link href="#home">
-                <FaDollarSign className="icon-top-header" /> USD
-              </Nav.Link>
-              <Nav.Link href="#home">
-                <FaUser className="icon-top-header" /> My Account
-              </Nav.Link>
-            </div>
-          </Nav>
-        </Container>
-      </div>
-      {/* <!-- /TOP HEADER --> */}
-
-      {/* <!-- MAIN HEADER --> */}
-      <div id="header" className="pt-1">
-        <Container>
-          <Row>
-            {/* <!-- LOGO --> */}
-            <Col sm={12} md={12} lg={3} className="header-logo col-3">
-              <div>
-                <a href="#">
-                  <img src="src/assets/logo.png" alt="" className="img-fluid" />
-                </a>
+    <>
+      <header>
+        {/* TOP HEADER */}
+        <div id="top-header" className="py-1">
+          <Container>
+            <Nav className="d-flex justify-content-between">
+              <div className="d-flex">
+                <Nav.Link href="#home">
+                  <FaPhoneAlt className="icon-top-header" /> +021-95-51-84
+                </Nav.Link>
+                <Nav.Link href="#home">
+                  <MdOutlineEmail className="icon-top-header" /> email@email.com
+                </Nav.Link>
+                <Nav.Link href="#home">
+                  <FaMapMarkerAlt className="icon-top-header" /> 1734 Stonecoal
+                  Road
+                </Nav.Link>
               </div>
-            </Col>
-            {/* <!-- /LOGO --> */}
-            {/* <!-- SEARCH BAR --> */}
-            <Col sm={12} md={12} lg={6} className="col-3">
-              <div className="py-4">
-                <form className="position-relative d-flex">
-                  <select className="input-select">
-                    <option value="0">All Categories</option>
-                    <option value="1">Category 01</option>
-                    <option value="1">Category 02</option>
-                  </select>
-                  <input className="input" placeholder="Search here" />
-                  <button className="search-btn">Search</button>
-                </form>
+              <div className="d-flex">
+                <Nav.Link href="#home">
+                  <FaDollarSign className="icon-top-header" /> USD
+                </Nav.Link>
+                <Nav.Link href="#home">
+                  <FaUser className="icon-top-header" /> My Account
+                </Nav.Link>
               </div>
-            </Col>
-            {/* <!-- /SEARCH BAR --> */}
+            </Nav>
+          </Container>
+        </div>
+        {/* /TOP HEADER */}
 
-            {/* <!-- ACCOUNT --> */}
-            <Col sm={12} md={12} lg={3} className="clearfix col-3">
-              <div className="header-ctn d-flex">
-                {/* WISHLIST */}
-                <div className="wishlist">
-                  <a href="#" className="text-decoration-none p-4">
-                    <Row>
-                      <Col className="col-12">
-                        <CiHeart className="icon-wishlist" />
-                        <div className="qty">2</div>
-                      </Col>
-                      <Col className="col-12">
-                        <span>Your Wishlist</span>
-                      </Col>
-                    </Row>
+        {/* MAIN HEADER */}
+        <div id="header" className="pt-1">
+          <Container>
+            <Row>
+              {/* LOGO */}
+              <Col xs={12} sm={12} md={12} lg={3} className="header-logo col-3">
+                <div>
+                  <a href="#">
+                    <img
+                      src="src/assets/logo.png"
+                      alt=""
+                      className="img-fluid"
+                    />
                   </a>
                 </div>
+              </Col>
+              {/* /LOGO */}
+              {/* SEARCH BAR */}
+              <Col xs={12} sm={12} md={12} lg={6} className="col-3">
+                <div className="py-4">
+                  <form className="position-relative d-flex">
+                    <select className="input-select">
+                      <option value="0">All Categories</option>
+                      <option value="1">Category 01</option>
+                      <option value="1">Category 02</option>
+                    </select>
+                    <input className="input" placeholder="Search here" />
+                    <Button type="submit" className="search-btn">
+                      Search
+                    </Button>
+                  </form>
+                </div>
+              </Col>
+              {/* /SEARCH BAR */}
 
-                {/* CART */}
-                <Dropdown>
-                  <Dropdown.Toggle
-                    variant="link"
-                    className="items-dropdown text-decoration-none p-4"
-                    id="dropdown-basic"
-                  >
-                    <Row>
-                      <Col className="col-12">
-                        <PiShoppingCartThin className="icon-yourcard" />
-                        <div className="qty">3</div>
-                      </Col>
-                      <Col className="col-12">
-                        <span>Your Cart</span>
-                      </Col>
-                    </Row>
-                  </Dropdown.Toggle>
+              {/* ACCOUNT */}
+              <Col xs={12} sm={12} md={12} lg={3} className="clearfix col-3">
+                <div className="header-ctn d-flex">
+                  {/* WISHLIST */}
+                  <div className="wishlist">
+                    <a href="#" className="text-decoration-none p-4">
+                      <Row>
+                        <Col className="col-12">
+                          <CiHeart className="icon-wishlist" />
+                          <div className="qty">2</div>
+                        </Col>
+                        <Col className="col-12">
+                          <span>Your Wishlist</span>
+                        </Col>
+                      </Row>
+                    </a>
+                  </div>
 
-                  <Dropdown.Menu className="items-dropdown-menu">
-                    <Dropdown.Item className="cart-list">
-                      <div className="product-widget d-flex">
-                        <div className="product-img">
-                          <img
-                            src="src/assets/product01.png"
-                            alt="logo product"
-                            width="60"
-                            height="60"
-                          />
+                  {/* CART */}
+                  <Dropdown drop="down">
+                    <Dropdown.Toggle
+                      variant="link"
+                      className="items-dropdown text-decoration-none p-4"
+                      id="dropdown-basic"
+                    >
+                      <Row>
+                        <Col className="col-12">
+                          <PiShoppingCartThin className="icon-yourcard" />
+                          <div className="qty">3</div>
+                        </Col>
+                        <Col className="col-12">
+                          <span>Your Cart</span>
+                        </Col>
+                      </Row>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu className="items-dropdown-menu">
+                      <Dropdown.Item className="cart-list">
+                        <div className="product-widget d-flex">
+                          <div className="product-img me-2">
+                            <img
+                              src="src/assets/product01.png"
+                              alt="logo product"
+                              width="60"
+                              height="60"
+                            />
+                          </div>
+                          <div className="product-body">
+                            <h3 className="product-name">
+                              <a
+                                href="#"
+                                className="text-decoration-none text-black text-uppercase"
+                              >
+                                product name goes here
+                              </a>
+                            </h3>
+                            <h4 className="product-price">
+                              <span className="qty">1x</span> $980.00
+                            </h4>
+                          </div>
+                          <Button className="item-remove btn btn-remove-item">
+                            <FaTimes />
+                          </Button>
                         </div>
-                        <div className="product-body">
-                          <h3 className="product-name">
-                            <a href="#">product name goes here</a>
-                          </h3>
-                          <h4 className="product-price">
-                            <span className="qty">1x</span>$980.00
-                          </h4>
+                      </Dropdown.Item>
+
+                      <Dropdown.Item className="cart-list">
+                        <div className="product-widget d-flex align-items-center">
+                          <div className="product-img me-2">
+                            <img
+                              src="src/assets/tdc.jpg"
+                              alt="logo product"
+                              width="60"
+                              height="60"
+                            />
+                          </div>
+                          <div className="product-body">
+                            <h3 className="product-name">
+                              <a
+                                href="#"
+                                className="text-decoration-none text-black text-uppercase"
+                              >
+                                product name goes here
+                              </a>
+                            </h3>
+                            <h4 className="product-price">
+                              <span className="qty">1x</span> $980.00
+                            </h4>
+                          </div>
+                          <Button className="item-remove btn btn-remove-item">
+                            <FaTimes />
+                          </Button>
                         </div>
-                        <Button className="item-remove btn btn-remove-item">
-                          <FaTimes />
-                        </Button>
-                      </div>
-                    </Dropdown.Item>
+                      </Dropdown.Item>
 
-                    <Dropdown.Item>
-                      <div className="cart-summary">
-                        <small>3 Item(s) selected</small>
-                        <h5>SUBTOTAL: $2940.00</h5>
-                      </div>
-                    </Dropdown.Item>
+                      <Dropdown.Item>
+                        <div className="cart-summary">
+                          <small className="fw-lighter">
+                            3 Item(s) selected
+                          </small>
+                          <h6>SUBTOTAL: $2940.00</h6>
+                        </div>
+                      </Dropdown.Item>
 
-                    <Dropdown.Item className="inline-block">
-                      <div className="cart-btns">
-                        <a href="#">View Cart</a>
-                        <a href="#">
-                          Checkout <FaRegArrowAltCircleRight />
-                        </a>
-                      </div>
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-
-                {/* MOBILE MENU TOGGLE */}
-                {/* <button className="mobile-menu-toggle btn btn-link">
-                  <FaBars />
-                </button> */}
-              </div>
-            </Col>
-            {/* <!-- /ACCOUNT --> */}
-          </Row>
-        </Container>
-      </div>
-      {/* <!-- /MAIN HEADER --> */}
-    </header>
+                      <Dropdown.Item className="inline-block">
+                        <div className="cart-btns">
+                          <a href="#">View Cart</a>
+                          <a href="#">
+                            Checkout <FaRegArrowAltCircleRight />
+                          </a>
+                        </div>
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+              </Col>
+              {/* /ACCOUNT */}
+            </Row>
+          </Container>
+        </div>
+        {/* /MAIN HEADER */}
+      </header>
+    </>
   );
 };
 
