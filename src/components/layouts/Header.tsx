@@ -17,6 +17,7 @@ import {
   FaTimes,
   FaUser,
 } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { PiShoppingCartThin } from "react-icons/pi";
 
@@ -207,6 +208,45 @@ const Header = () => {
               {/* /ACCOUNT */}
             </Row>
           </Container>
+          <Navbar expand="lg" className="custom-navbar">
+            <Container className="p-0">
+              <Navbar.Toggle
+                aria-controls="basic-navbar-nav"
+                className="custom-toggle"
+              >
+                <Row>
+                  <Col className="col-12 p-0">
+                    <FiMenu />
+                  </Col>
+                  <Col className="col-12 p-0">Menu</Col>
+                </Row>
+              </Navbar.Toggle>
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                  <div className="nav-item">
+                    <Nav.Link href="#home" className="home">
+                      Home
+                    </Nav.Link>
+                  </div>
+                  <div className="nav-item">
+                    <Nav.Link href="#link">Hot Deals</Nav.Link>
+                  </div>
+                  <div className="nav-item">
+                    <Nav.Link href="#link1">Laptops</Nav.Link>
+                  </div>
+                  <div className="nav-item">
+                    <Nav.Link href="#link2">Smartphones</Nav.Link>
+                  </div>
+                  <div className="nav-item">
+                    <Nav.Link href="#link3">Cameras</Nav.Link>
+                  </div>
+                  <div className="nav-item">
+                    <Nav.Link href="#link4">Accessories</Nav.Link>
+                  </div>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
         </div>
         {/* /MAIN HEADER */}
       </header>
