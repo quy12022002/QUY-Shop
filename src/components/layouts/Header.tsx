@@ -197,24 +197,12 @@ const Header = () => {
               </Navbar.Toggle>
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <div className="nav-item">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                  </div>
-                  <div className="nav-item">
-                    <Nav.Link href="#link">Hot Deals</Nav.Link>
-                  </div>
-                  <div className="nav-item">
-                    <Nav.Link href="#link1">Laptops</Nav.Link>
-                  </div>
-                  <div className="nav-item">
-                    <Nav.Link href="#link2">Smartphones</Nav.Link>
-                  </div>
-                  <div className="nav-item">
-                    <Nav.Link href="#link3">Cameras</Nav.Link>
-                  </div>
-                  <div className="nav-item">
-                    <Nav.Link href="#link4">Accessories</Nav.Link>
-                  </div>
+                  <Nav.Link href="#home">Home</Nav.Link>
+                  <Nav.Link href="#link">Hot Deals</Nav.Link>
+                  <Nav.Link href="#link1">Laptops</Nav.Link>
+                  <Nav.Link href="#link2">Smartphones</Nav.Link>
+                  <Nav.Link href="#link3">Cameras</Nav.Link>
+                  <Nav.Link href="#link4">Accessories</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>

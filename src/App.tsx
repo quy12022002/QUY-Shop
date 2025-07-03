@@ -1,13 +1,19 @@
 import "./App.scss";
-import { Container } from "react-bootstrap";
 import Header from "./components/layouts/Header";
-import Collections from "./components/layouts/Collections";
+import BottomNavbar from "./components/layouts/BottomNavbar";
+import Category from "./components/layouts/Category";
 
 function App() {
   return (
     <div className="app-container">
       <Header />
-      <Collections />
+      <div className="category-container pt-2">
+        <Category />
+      </div>
+
+      <div className="bottom-navbar-container">
+        <BottomNavbar />
+      </div>
     </div>
   );
 }

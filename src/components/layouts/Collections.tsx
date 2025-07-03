@@ -3,7 +3,7 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 const Collections = () => {
   return (
-    <div className="collections-container">
+    <div className="collections-container p-0">
       <Container>
         <Row>
           {/* <!-- shop --> */}
