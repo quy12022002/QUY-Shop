@@ -9,7 +9,6 @@ import {
 } from "react-bootstrap";
 import { CiHeart } from "react-icons/ci";
 import {
-  FaBars,
   FaDollarSign,
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -126,74 +125,49 @@ const Header = () => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu className="items-dropdown-menu">
-                      <Dropdown.Item className="cart-list">
-                        <div className="product-widget d-flex">
-                          <div className="product-img me-2">
-                            <img
-                              src="src/assets/product01.png"
-                              alt="logo product"
-                              width="60"
-                              height="60"
-                            />
+                      <Dropdown.Item className="p-0">
+                        <div className="cart-list p-2 mb-0">
+                          {/* Cart */}
+                          <div className="product-widget d-flex">
+                            <div className="product-img me-2">
+                              <img
+                                src="src/assets/product01.png"
+                                alt="logo product"
+                                width="60"
+                                height="60"
+                              />
+                            </div>
+                            <div className="product-body">
+                              <h3 className="product-name">
+                                <a
+                                  href="#"
+                                  className="text-decoration-none text-black text-uppercase"
+                                >
+                                  product name goes here
+                                </a>
+                              </h3>
+                              <h4 className="product-price">
+                                <span className="">1x</span> $980.00
+                              </h4>
+                            </div>
+                            <Button className="btn btn-remove-item">
+                              <FaTimes />
+                            </Button>
                           </div>
-                          <div className="product-body">
-                            <h3 className="product-name">
-                              <a
-                                href="#"
-                                className="text-decoration-none text-black text-uppercase"
-                              >
-                                product name goes here
-                              </a>
-                            </h3>
-                            <h4 className="product-price">
-                              <span className="qty">1x</span> $980.00
-                            </h4>
-                          </div>
-                          <Button className="item-remove btn btn-remove-item">
-                            <FaTimes />
-                          </Button>
+                          {/* /Cart */}
                         </div>
                       </Dropdown.Item>
 
-                      <Dropdown.Item className="cart-list">
-                        <div className="product-widget d-flex align-items-center">
-                          <div className="product-img me-2">
-                            <img
-                              src="src/assets/tdc.jpg"
-                              alt="logo product"
-                              width="60"
-                              height="60"
-                            />
-                          </div>
-                          <div className="product-body">
-                            <h3 className="product-name">
-                              <a
-                                href="#"
-                                className="text-decoration-none text-black text-uppercase"
-                              >
-                                product name goes here
-                              </a>
-                            </h3>
-                            <h4 className="product-price">
-                              <span className="qty">1x</span> $980.00
-                            </h4>
-                          </div>
-                          <Button className="item-remove btn btn-remove-item">
-                            <FaTimes />
-                          </Button>
-                        </div>
-                      </Dropdown.Item>
-
-                      <Dropdown.Item>
+                      <Dropdown.Item disabled>
                         <div className="cart-summary">
                           <small className="fw-lighter">
                             3 Item(s) selected
                           </small>
-                          <h6>SUBTOTAL: $2940.00</h6>
+                          <h6 className="text-black">SUBTOTAL: $2940.00</h6>
                         </div>
                       </Dropdown.Item>
 
-                      <Dropdown.Item className="inline-block">
+                      <Dropdown.Item className="pt-0">
                         <div className="cart-btns">
                           <a href="#">View Cart</a>
                           <a href="#">

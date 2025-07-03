@@ -145,12 +145,16 @@ body {
           }
 
           .dropdown-menu {
+            --bs-dropdown-link-active-color: inherit;
+            --bs-dropdown-link-active-bg: transparent;   
+
             &.items-dropdown-menu {
               border-radius: 0;
 
               .cart-list {
                 background-color: #fff;
                 overflow-y: scroll;
+                max-height: 120px;
                 margin-bottom: 1rem;
 
                 .product-widget {
@@ -185,39 +189,41 @@ body {
                   padding: 0;
                 }
               }
-            }
-          }
 
-          .cart-summary {
-            border-top: 1px solid #e4e7ed;
-            padding-top: 15px;
-            padding-bottom: 15px;
-          }
-
-          .cart-btns {
-            margin: 0px -17px -17px;
-            a {
-              display: inline-block;
-              width: calc(50% - 0px);
-              padding: 12px;
-              text-decoration: none;
-              background-color: #d10024;
-              color: #fff;
-              text-align: center;
-              font-weight: 700;
-              -webkit-transition: 0.2s all;
-              transition: 0.2s all;
-
-              &:first-child {
-                background-color: #1e1f29;
+              .cart-summary {
+                border-top: 1px solid #e4e7ed;
+                padding-top: 15px;
+                padding-bottom: 15px;
               }
 
-              &:hover {
-                opacity: 0.9;
+              .cart-btns {
+                margin: 0px -17px -17px;
+
+                a {
+                  display: inline-block;
+                  width: calc(50% - 0px);
+                  padding: 12px;
+                  text-decoration: none;
+                  background-color: #d10024;
+                  color: #fff;
+                  text-align: center;
+                  font-weight: 700;
+                  -webkit-transition: 0.2s all;
+                  transition: 0.2s all;
+
+                  &:first-child {
+                    background-color: #1e1f29;
+                  }
+
+                  &:hover {
+                    opacity: 0.9;
+                  }
+                }
               }
             }
           }
         }
+
         @media (max-width: 768px) {
           .header-ctn {
             .menu-toggle {
