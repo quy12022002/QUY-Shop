@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
-import { DiVim } from "react-icons/di";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import { GoChevronRight } from "react-icons/go";
 import Collections from "./Collections";
 

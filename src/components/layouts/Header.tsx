@@ -28,7 +28,7 @@ const Header = () => {
         <div id="top-header" className="py-1">
           <Container>
             <Nav className="d-flex justify-content-between">
-              <div className="d-flex">
+              <div className="d-flex align-items-center">
                 <Nav.Link href="#home">
                   <FaPhoneAlt className="icon-top-header" /> +021-95-51-84
                 </Nav.Link>
@@ -40,7 +40,7 @@ const Header = () => {
                   Road
                 </Nav.Link>
               </div>
-              <div className="d-flex">
+              <div className="d-flex align-items-center">
                 <Nav.Link href="#home">
                   <FaDollarSign className="icon-top-header" /> USD
                 </Nav.Link>
