@@ -543,6 +543,7 @@ body {
     .footer-container {
       border-top: 1px solid #e4e7ed;
       align-items: center;
+
       h4 {
         &.footer-title {
           font-size: 14px;
@@ -571,6 +572,10 @@ body {
         @media (min-width: 768px) {
           text-align: end;
         }
+
+        @media (max-width: 576px) {
+          padding-bottom: 1rem;
+        }
       }
     }
   }
@@ -578,7 +583,13 @@ body {
   /* Bottom navbar*/
   .bottom-navbar-container {
     display: none;
-    border-top: 1px solid #e4e7ed;
+    position: relative;
+    padding-bottom: 50px;
+
+    .nav {
+      background-color: #fff;
+      border-top: 2px solid #dc3545;
+    }
 
     @media (max-width: 768px) {
       display: block;

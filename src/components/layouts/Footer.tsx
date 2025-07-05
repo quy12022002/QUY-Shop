@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Row className="footer-container p-3">
+        <Row className="footer-container pt-2">
           <Col sx={12} sm={12} md={12} lg={2}>
             <h4 className="footer-title">Connect with us</h4>
           </Col>

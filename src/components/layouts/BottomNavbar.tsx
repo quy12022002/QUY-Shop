@@ -6,9 +6,9 @@ import { RiFileList2Line } from "react-icons/ri";
 
 const BottomNavbar = () => {
   return (
-    <Container>
+    <Container fluid>
       <Row>
-        <Nav className="">
+        <Nav className="fixed-bottom">
           <Col xs={3} sm={3} md={3}>
             <Nav.Link
               aria-label="Home"
