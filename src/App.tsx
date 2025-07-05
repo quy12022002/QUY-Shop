@@ -3,6 +3,7 @@ import Header from "./components/layouts/Header";
 import BottomNavbar from "./components/layouts/BottomNavbar";
 import Category from "./components/layouts/Category";
 import HotDeals from "./components/layouts/HotDeals";
+import Footer from "./components/layouts/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div id="hot-deals" className="section">
         <HotDeals />
       </div>
+      <Footer />
       <div className="bottom-navbar-container">
         <BottomNavbar />
       </div>
